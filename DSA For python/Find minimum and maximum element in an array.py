@@ -35,5 +35,37 @@ Constraints:
 1 <= Ai <=1012
 
 '''
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Solution:
+ 
+ #User function Template for python3
+
+def getMinMax( a, n):
+    minimum =a[0]
+    maximum =a[0]
+    for i in a:
+        if(i<minimum):
+            minimum =i
+        if(i>maximum):
+            maximum =i
+    return minimum,maximum
+
+def main():
+
+    T = int(input())
+
+    while(T > 0):
+        n = int(input())
+        a = [int(x) for x in input().strip().split()]
+        
+        product = getMinMax(a, n)
+        print(product[0], end=" ")
+        print(product[1])
+
+        T -= 1
+
+
+if __name__ == "__main__":
+    main()
 
 
